@@ -18,7 +18,7 @@ function addDestinationInfo(document, name, diameter, star, distance, moons, ima
 }
 
 function validateInput(testInput) {
-    if (testInput.trim() === "") {
+    if (testInput === "") {
         return "Empty";
     } else if (isNaN(testInput)) {
         return "Not a Number";
@@ -64,7 +64,7 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
 
         // Shuttle is ready for launch
         else {
-            document.getElementById("faultyItems").style.visibility = "hidden";
+            document.getElementById("faultyItems").style.visibility = "visible";
             document.getElementById("launchStatus").textContent = "Shuttle is ready for launch";
             document.getElementById("launchStatus").style.color = "#419F6A"; // Green shade
         }
